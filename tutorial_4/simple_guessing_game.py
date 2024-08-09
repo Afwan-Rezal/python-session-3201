@@ -1,13 +1,5 @@
 import random
 
-def guess(hidden: int, answer: int):
-    correct = False
-    if answer != hidden:
-        high_or_low(hidden, answer)
-    else:
-        correct = True
-    return correct
-
 def selection_phase(attempts:int):
     statement = ""
     if attempts == 5:
@@ -15,6 +7,14 @@ def selection_phase(attempts:int):
     else:
         statement = "You can do it! Try again and guess another number between 1 to 100!"
     return statement
+
+def guess(hidden: int, answer: int):
+    correct = False
+    if answer != hidden:
+        high_or_low(hidden, answer)
+    else:
+        correct = True
+    return correct
 
 def high_or_low(hidden:int, answer:int):
     print("Wrong number! \n")
